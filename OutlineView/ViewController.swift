@@ -11,6 +11,7 @@ import Cocoa
 class ViewController: NSViewController, NSSearchFieldDelegate, NSOutlineViewDelegate {
 
 	@IBOutlet var treeController: NSTreeController!
+	@IBOutlet weak var outlineView: NSOutlineView!
 	
 	dynamic var tree: [treeItem] = []
 	
@@ -39,7 +40,8 @@ class ViewController: NSViewController, NSSearchFieldDelegate, NSOutlineViewDele
 			else {
 				let predicate = NSPredicate(format: "name contains %@", searchField.stringValue)
 				print("Setting predicate: \(predicate.predicateFormat)")
-				treeController.fetchPredicate = predicate } }
+				treeController.fetchPredicate = predicate }
+			outlineView.reloadData() }
 	}
 }
 

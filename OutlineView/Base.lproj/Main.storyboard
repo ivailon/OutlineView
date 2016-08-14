@@ -788,6 +788,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="outlineView" destination="Q5L-P0-Z9i" id="8Gt-MB-SA3"/>
                         <outlet property="treeController" destination="7kZ-iV-Dan" id="sqn-vn-DS4"/>
                     </connections>
                 </viewController>
